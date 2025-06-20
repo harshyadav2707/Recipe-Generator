@@ -1,0 +1,168 @@
+:root {
+    --bg-body: #fff7ec;            
+    --bg-form: #f9f5ee;            
+    --bg-card: #ffffff;            
+    --bg-list: #f2e8dc;            
+    --bg-list-box: #f8f1e7;        
+    --border-list: #e6d3c7;        
+    --border-card: #e2d6cb;
+    --border-output: #ddd2c6;
+    --border-box: #e0cfc0;
+    --text-dark: #3e2f20;          
+    --text-muted: #6d5844;         
+    --text-heading: #594a3a;       
+    --text-ingredient: #4f3c2f;    
+    --text-error: #d24c39;         
+    --btn-bg: #396c4f;             
+    --btn-hover: #2f5a42;          
+  }
+  
+  body {
+    background-color: var(--bg-body);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 960px;
+    padding: 1rem;
+  }
+  
+  .main-wrapper {
+    background-color: var(--bg-card);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    min-height: 520px;
+    width: 100%;
+  }
+  
+  .form-area {
+    background-color: var(--bg-form);
+    border-right: 1px solid #e4e4e4;
+  }
+  .h2-image{
+    height: 40px;
+  }
+  h2{
+    color: var(--text-heading);
+  }
+
+  #ingredientList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-left: 0;
+    list-style: none;
+  }
+  
+  #ingredientList li {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--bg-list);
+    color: var(--text-ingredient);
+    padding: 8px 14px;
+    border-radius: 50px;
+    border: 1px solid var(--border-list);
+    font-size: 14px;
+    word-break: break-word;
+    width: fit-content;
+  }
+  
+  #ingredientList button {
+    margin-left: 8px;
+    background: none;
+    border: none;
+    color: var(--text-error);
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+  }
+  
+  .visual-area{
+    background: #FFF9F1;
+  }
+  .output-area {
+    font-size: 15px;
+    background-color: #fcfcfc;
+    border: 1px solid var(--border-output);
+    padding: 1rem;
+    border-radius: 0.75rem;
+    color: var(--text-dark);
+    width: 100%;
+  }
+  
+  .output-area h3 {
+    color: var(--text-heading);
+  }
+  
+  .output-area ul,
+  .output-area ol {
+    padding-left: 1.2rem;
+  }
+  
+  .btn-success {
+    background-color: var(--btn-bg);
+    border-color: var(--btn-bg);
+  }
+  
+  .btn-success:hover {
+    background-color: var(--btn-hover);
+    border-color: var(--btn-hover);
+  }
+  
+  #error {
+    color: var(--text-error);
+    font-size: 13px;
+  }
+  
+  .recipe-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: 12px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .recipe-title {
+    color: var(--text-heading);
+    margin-bottom: 1rem;
+  }
+  
+  .section-heading {
+    font-size: 16px;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-muted);
+  }
+  
+  .custom-list {
+    background-color: var(--bg-list-box);
+    border: 1px solid var(--border-box);
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    list-style-position: inside;
+    margin-bottom: 1rem;
+  }
+  
+  .custom-list li {
+    padding: 4px 0;
+    color: var(--text-dark);
+    font-size: 14.5px;
+    border: none;
+    background: none;
+    border-radius: 0;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }

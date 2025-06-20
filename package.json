@@ -1,0 +1,20 @@
+{
+  "name": "recipemaker",
+  "version": "1.0.0",
+  "description": "Make food recipe with LLM",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "harshyadav2027",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "openai": "^5.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
