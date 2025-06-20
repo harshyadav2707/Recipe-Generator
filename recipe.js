@@ -16,26 +16,12 @@ Respond only with a valid JSON object in the following format:
   "instructions": ["Step 1", "Step 2"]
 }`;
 
-    return {
-      title: "Quick Mixed Stir Fry",
-      ingredients: [
-        ...ingredients,
-        "2 tbsp olive oil",
-        "Salt to taste",
-        "1 tsp soy sauce",
-      ],
-      instructions: [
-        "Heat oil in a pan over medium heat.",
-        "Add all ingredients and stir-fry for 5-7 minutes.",
-        "Season with salt and soy sauce. Serve hot.",
-      ],
-    };
   const response = await openai.chat.completions.create({
     model: "mistralai/devstral-small:free",
     messages: [{ role: "user", content: prompt }],
     temperature: 0.7,
   });
-
+  console.log(response.choices[0].message.content);
   return JSON.parse(response.choices[0].message.content);
 }
 
@@ -48,7 +34,7 @@ Return ONLY a valid JSON array of any items that are **not** real or common food
 ["plastic", "glue"]
 
 If all are valid food items, return an empty array: []`;
-  return [];
+
   const response = await openai.chat.completions.create({
     model: "mistralai/devstral-small:free",
     messages: [{ role: "user", content: prompt }],
